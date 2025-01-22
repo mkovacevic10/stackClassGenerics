@@ -1,15 +1,15 @@
-// Stack.java
-
 /**
  * A generic stack class that uses an array to store elements.
  * @param <T> The type of elements stored in the stack.
+ * @author Maksym Kovacevic
+ * @version 21-01-2025
  */
 public class Stack<T> {
     private T[] elements;
     private int size;
     private int capacity;
 
-    @SuppressWarnings("unchecked")
+
     public Stack(int capacity) {
         this.capacity = capacity;
         this.elements = (T[]) new Object[capacity];
@@ -22,7 +22,6 @@ public class Stack<T> {
 
     /**
      * Pushes an element onto the stack.
-     *
      * @param element The element to be pushed.
      * @throws StackFullException if the stack is full.
      */
@@ -35,7 +34,6 @@ public class Stack<T> {
 
     /**
      * Pops an element from the stack.
-     *
      * @return The element that was popped.
      * @throws StackEmptyException if the stack is empty.
      */
@@ -50,7 +48,6 @@ public class Stack<T> {
 
     /**
      * Peeks at the top element of the stack.
-     *
      * @return The top element of the stack.
      * @throws StackEmptyException if the stack is empty.
      */
@@ -63,14 +60,12 @@ public class Stack<T> {
 
     /**
      * Lists all elements in the stack as a semicolon-separated string.
-     *
      * @return A string containing all elements in the stack separated by semicolons.
      */
     public String list() {
         if (size == 0) {
             return "";
         }
-
         String result = "";
         for (int i = 0; i < size - 1; i++) {
             result += elements[i] + ";";
